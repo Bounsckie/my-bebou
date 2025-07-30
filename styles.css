@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  background: url("assets/images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffb6c1;
+}
+
+/* Semi-transparent container for better text readability */
+.container {
+  background-color: #ffb6c1;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  width: 60%;  /* wider on larger screens */
+}
+
+/* Header styling with a romantic font and text-shadow */
+.header_text {
+  font-family: "Sacramento", cursive;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #e91e63;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive image container */
+.image_container {
+  text-align: center;
+}
+
+.image_container img {
+  width: 40%; /* Limits the image to 40% of the container/screen width */
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Buttons container */
+.buttons {
+  margin-top: 20px;
+}
+ .yes-button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #2eec32, #50ef06);
+  background: radial-gradient(
+    circle at bottom,
+    rgba(46, 236, 49, 0.5) 10%,
+    #37f012 70%
+  );
+  outline: 0;
+}
+.no-button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #2eec32, #50ef06);
+  background: radial-gradient(
+    circle at bottom,
+    rgba(231, 11, 11, 0.5) 10%,
+    #f01212 70%
+  );
+  outline: 0;
+} 
+
+  .yes-button {
+    cursor: pointer;
+  padding: 1em;
+  font-size: 1em;
+  width: 7em;
+  aspect-ratio: 1/0.25;
+  color: white;
+  background: rgb(12, 219, 12);
+  background-size: cover;
+  background-blend-mode: overlay;
+  border-radius: 0.5em;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+  
+  .no-button {
+    cursor: pointer;
+  padding: 1em;
+  font-size: 1em;
+  width: 7em;
+  aspect-ratio: 1/0.25;
+  color: white;
+  background: #f44336;
+  background-size: cover;
+  background-blend-mode: overlay;
+  border-radius: 0.5em;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Media Query for Tablets and Smaller Screens */
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+    padding: 20px;
+  }
+  .header_text {
+    font-size: 36px;
+  }
+  .btn {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+  .image_container img {
+    width: 60%;
+  }
+}
+
+/* Additional Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+  .header_text {
+    font-size: 32px;
+  }
+  .image_container img {
+    width: 80%;
+  }
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin: 5px;
+  }
+}

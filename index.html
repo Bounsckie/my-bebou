@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Bebou</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="header_text">Will You Be My Bebou Forever?</h1>
+        <div class="image_container">
+            <!-- Replace with your selected romantic photo -->
+            <img src="romantic-photo.jpg" alt="Romantic Background">
+        </div>
+        <div class="buttons">
+            <button class="yes-button" id="yesButton" onclick="location.href='yes.html'">Yes!</button>
+            <button class="no-button" id="noButton" onmouseover="evadeButton()" onclick="evadeButton()">No</button>
+        </div>
+    </div>
+
+    <script>        
+
+        // Function to move the "No" button and show a random GIF
+        function evadeButton() {
+    const noBtn = document.getElementById("noButton");
+    const btnWidth = noBtn.offsetWidth;
+    const btnHeight = noBtn.offsetHeight;
+
+    const maxX = window.innerWidth - btnWidth;
+    const minY = window.innerHeight * 0.3;
+    const maxY = window.innerHeight - btnHeight;
+
+    const randomX = Math.random() * maxX;
+    const randomY = Math.random() * (maxY - minY) + minY;
+
+    noBtn.style.position = "absolute";
+    noBtn.style.left = randomX + "px";
+    noBtn.style.top = randomY + "px";
+}
+   
+    </script>
+</body>
+
+</html>
